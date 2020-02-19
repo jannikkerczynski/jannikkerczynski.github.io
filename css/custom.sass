@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Montserrat|Roboto+Slab&display=swap|Arimo:400,700&display=swap');
+
+$maincolor: #FFD91E
+$secondarycolor: #232323
+$textwhite: #ffffff
+$textdark: #232323
+$fontText: 'Open Sans', sans-serif
+$fontHelvetica: 'Arimo', sans-serif
+$fontTitle: 'Montserrat', sans-serif
+$fontText1: 'Roboto Slab', serif
+=center
+    top: 50%
+    left: 20%
+    transform: translate(-50%,-50%)
+
+body
+    font-family: sans-serif
+    overflow-x: hidden
+    font-family: 'Open Sans', sans-serif
+h1
+    font-family: $fontHelvetica
+.nav-container
+    max-width: 1400px
+
+nav
+    position: fixed
+    z-index: 100
+    background-color: #ffffff00
+    height: 50px
+    width: 100vw
+    display: flex
+    .navInContainer
+        width: 1200px
+        display: flex
+        margin: 0 auto
+    .brandContainer
+        display: flex
+        justify-content: center
+        align-content: center
+    ul
+        display: flex
+        padding: 0
+        list-style: none
+        margin: 0 0 0 auto
+    li
+        display: flex
+        align-self: center
+        margin: 0 15px
+    a
+        text-decoration: none
+        color: $textwhite
+        transition: color .15s ease-in-out
+        display: flex
+        align-self: center
+        &:hover
+            color: #fa419dbe
+            text-decoration: none
+    .brandName
+        font-size: 1.5rem
+        display: flex
+        align-self: center
+        margin: 0 0 0 25px
+        font-family: $fontHelvetica
+
+    .brandNameLogo
+        height: 40px
+        width: 40px
+ 
+
+.opener
+    position: relative
+    z-index: 0
+    display: flex
+    width: 100vw
+    height: 100vh
+    background: url(/img/hintergrundv2.png)
+    background-repeat: no-repeat
+    background-size: cover
+    align-items: center
+    a
+        text-decoration: none
+    .caption
+        // background-color: #3d3d3d4f
+        padding: 50px 0 50px 50px
+        color: white
+        width: 550px
+        margin: 20vw
+    .buttonWork
+        padding: 10px 25px
+        margin: 0px 10px 0px 0px
+        border-radius: 0px
+        border: none
+        color: $textwhite
+        background: #994abe
+        font-family: $fontHelvetica
+        font-size: 1.1rem
+        transition: all 0.2s ease-in-out
+        &:hover
+            background: #7f3c9e
+        &:focus
+            outline: none
+    .buttonAboutMe
+        padding: 9px 24px
+        margin: 0px 10px 0px 0px
+        border-radius: 0px
+        border: solid 2px #994abe
+        color: #ffffffc9
+        background: #00000000
+        font-family: $fontHelvetica
+        font-size: 1.1rem
+        transition: all 0.2s ease-in-out
+        &:hover
+            background: #7f3c9e23
+            color: $textwhite
+        &:focus
+            outline: none
+    h1
+        font-size: 2.5rem
+        font-family: $fontTitle
+    p
+        font-size: 1.5rem
+        font-family: $fontText
+    ul
+        padding: 0
+        margin: 0
+        list-style: none
+        li
+            margin: 5px 0
+            font-size: 1.2rem
+            opacity: 0.8
+
+.introduction
+    padding: 200px 0
+    .img1
+        height: auto
+        width: 100%
+
+    
+  
+
+
