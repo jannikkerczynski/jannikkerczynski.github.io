@@ -17,11 +17,13 @@ nav {
   position: fixed;
   z-index: 100;
   background-color: #ffffff00;
-  height: 50px;
+  height: 75px;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 nav .navInContainer {
@@ -61,7 +63,11 @@ nav li {
   margin: 0 15px;
 }
 
-nav a {
+nav .borderLink {
+  border: solid 1px #74C7D1;
+}
+
+nav .navLink {
   text-decoration: none;
   color: #ffffff;
   -webkit-transition: color .15s ease-in-out;
@@ -71,11 +77,53 @@ nav a {
   display: flex;
   -ms-flex-item-align: center;
       align-self: center;
+  padding: 5px 10px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
-nav a:hover {
-  color: #fa419dbe;
+nav .navLink:hover {
+  color: #74C7D1;
   text-decoration: none;
+  background-color: #74C7D113;
+}
+
+nav .languageList {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  top: 60px;
+  left: -60px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  opacity: 0;
+  height: 0;
+}
+
+nav .languageList a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 5px;
+}
+
+nav .languageList a:hover {
+  color: #ffffffc4;
+}
+
+nav .navLanguage {
+  text-decoration: none;
+  color: #ffffff;
+  -webkit-transition: color .15s ease-in-out;
+  transition: color .15s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 5px 5px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
 }
 
 nav .brandName {
@@ -92,6 +140,12 @@ nav .brandName {
 nav .brandNameLogo {
   height: 40px;
   width: 40px;
+  margin: 15px 0;
+}
+
+.backgroundWrapper {
+  background: #2f286f;
+  background: linear-gradient(135deg, #352e75 0%, #262054 100%);
 }
 
 .opener {
@@ -102,9 +156,6 @@ nav .brandNameLogo {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background: url(/img/hintergrundv2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -114,20 +165,13 @@ nav .brandNameLogo {
   text-decoration: none;
 }
 
-.opener .caption {
-  padding: 50px 0 50px 50px;
-  color: white;
-  width: 550px;
-  margin: 20vw;
-}
-
 .opener .buttonWork {
   padding: 10px 25px;
   margin: 0px 10px 0px 0px;
   border-radius: 0px;
   border: none;
   color: #ffffff;
-  background: #994abe;
+  background: #74C7D1;
   font-family: "Arimo", sans-serif;
   font-size: 1.1rem;
   -webkit-transition: all 0.2s ease-in-out;
@@ -135,7 +179,7 @@ nav .brandNameLogo {
 }
 
 .opener .buttonWork:hover {
-  background: #7f3c9e;
+  background: #64abb3;
 }
 
 .opener .buttonWork:focus {
@@ -146,8 +190,8 @@ nav .brandNameLogo {
   padding: 9px 24px;
   margin: 0px 10px 0px 0px;
   border-radius: 0px;
-  border: solid 2px #994abe;
-  color: #ffffffc9;
+  border: solid 2px #74C7D1;
+  color: #ffffff;
   background: #00000000;
   font-family: "Arimo", sans-serif;
   font-size: 1.1rem;
@@ -156,7 +200,7 @@ nav .brandNameLogo {
 }
 
 .opener .buttonAboutMe:hover {
-  background: #7f3c9e23;
+  background: #74C7D123;
   color: #ffffff;
 }
 
@@ -165,13 +209,15 @@ nav .brandNameLogo {
 }
 
 .opener h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
+  color: #74C7D1;
   font-family: "Montserrat", sans-serif;
 }
 
 .opener p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: "Open Sans", sans-serif;
+  color: #dbdbdb;
 }
 
 .opener ul {
@@ -187,11 +233,240 @@ nav .brandNameLogo {
 }
 
 .introduction {
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.introduction .customContainer {
+  margin: 0 auto;
+}
+
+.introduction h3 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #74C7D1;
+}
+
+.introduction p {
+  color: #ffffff;
+}
+
+.introduction .wordBubbleContainer {
+  position: relative;
+  height: 700px;
+  width: 700px;
+}
+
+.introduction .wordBubble1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url(/img/wordBubble1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.introduction .wordBubble2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url(/img/wordBubble2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.introduction .wordBubble3 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url(/img/wordBubble3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.introduction a {
+  color: #74C7D1;
+}
+
+.introduction a:visited {
+  color: #57959c;
+}
+
+.projects {
   padding: 200px 0;
 }
 
-.introduction .img1 {
-  height: auto;
+.projects .projectCard {
+  height: 300px;
   width: 100%;
+  background-color: white;
+}
+
+.projects h3 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #74C7D1;
+  line-height: 1.5;
+}
+
+.contact {
+  padding: 200px 0;
+}
+
+.contact h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #74C7D1;
+  line-height: 1.5;
+}
+
+.contact p {
+  color: #ffffff;
+}
+
+.contact .buttonContact {
+  padding: 10px 25px;
+  margin: 0px 10px 0px 0px;
+  border-radius: 0px;
+  border: none;
+  color: #ffffff;
+  background: #74C7D1;
+  font-family: "Arimo", sans-serif;
+  font-size: 1.1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact .buttonContact:hover {
+  background: #64abb3;
+}
+
+.contact .buttonContact:focus {
+  outline: none;
+}
+
+.contact .buttonSocialMedia {
+  cursor: pointer;
+  width: 155px;
+  padding: 10px 25px;
+  margin: 0px 10px 0px 0px;
+  border-radius: 0px;
+  border-right: solid 0px #74C7D1;
+  color: #ffffff;
+  background: #0000001f;
+  font-family: "Arimo", sans-serif;
+  font-size: 1.1rem;
+  max-height: 45px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.contact .buttonSocialMedia:hover {
+  color: #74C7D1;
+  width: 335px;
+  border-right: solid 2px #74C7D1;
+}
+
+.contact .buttonSocialMedia:focus {
+  outline: none;
+}
+
+.contact .buttonSocialMediaPT {
+  cursor: pointer;
+  width: 170px;
+  padding: 10px 25px;
+  margin: 0px 10px 0px 0px;
+  border-radius: 0px;
+  border-right: solid 0px #74C7D1;
+  color: #ffffff;
+  background: #0000001f;
+  font-family: "Arimo", sans-serif;
+  font-size: 1.1rem;
+  max-height: 45px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.contact .buttonSocialMediaPT:hover {
+  color: #74C7D1;
+  width: 350px;
+  border-right: solid 2px #74C7D1;
+}
+
+.contact .buttonSocialMediaPT:focus {
+  outline: none;
+}
+
+.contact .buttonSocialMediaDE {
+  cursor: pointer;
+  width: 175px;
+  padding: 10px 25px;
+  margin: 0px 10px 0px 0px;
+  border-radius: 0px;
+  border-right: solid 0px #74C7D1;
+  color: #ffffff;
+  background: #0000001f;
+  font-family: "Arimo", sans-serif;
+  font-size: 1.1rem;
+  max-height: 45px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.contact .buttonSocialMediaDE:hover {
+  color: #74C7D1;
+  width: 360px;
+  border-right: solid 2px #74C7D1;
+}
+
+.contact .buttonSocialMediaDE:focus {
+  outline: none;
+}
+
+.contact .socialButton {
+  background-color: #ffffff00;
+  border: none;
+  padding: 0px 10px;
+  color: white;
+  font-size: 1.1rem;
+  margin-left: 20px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.contact .socialButton:hover {
+  color: #74C7D1;
+}
+
+.contact .socialButton:focus {
+  outline: none;
+}
+
+.contact #linkedIn {
+  opacity: 0;
+}
+
+.contact #instagram {
+  opacity: 0;
+}
+
+.contact #facebook {
+  opacity: 0;
+}
+
+footer {
+  color: #ffffff7a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.8rem;
 }
 /*# sourceMappingURL=custom.css.map */
