@@ -1,12 +1,18 @@
-$(function() {});
+const scrollActions = () => {
+  $(window).scroll(function() {
+    if (window.scrollY >= 50) $(".scrolling").css("opacity", "0");
+    if (window.scrollY >= 200) {
+      $("nav").css("background-color", "#352E74");
+      $(".languageList").css("background-color", "#352E74");
+    } else {
+      $("nav").css("background-color", "#ffffff00");
+      $(".languageList").css("background-color", "#ffffff00");
+      $(".scrolling").css("opacity", "1");
+    }
+  });
+};
 
-$(window).scroll(function() {
-  if (window.scrollY >= 200) {
-    $("nav").css("background-color", "#352E74");
-  } else {
-    $("nav").css("background-color", "#ffffff00");
-  }
-});
+scrollActions();
 
 $(".buttonSocialMedia").hover(
   function() {
@@ -77,7 +83,7 @@ $(".buttonSocialMediaDE").hover(
 );
 
 $(".navLanguage").click(function() {
-  $(".languageList").css("height", "100px");
+  $(".languageList").css("height", "90px");
   $(".languageList").css("opacity", "1");
 });
 $("html").click(function(e) {
@@ -85,4 +91,8 @@ $("html").click(function(e) {
     $(".languageList").css("height", "0");
     $(".languageList").css("opacity", "0");
   }
+});
+
+$(function() {
+  scrollActions();
 });

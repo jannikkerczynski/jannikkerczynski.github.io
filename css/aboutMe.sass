@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Montserrat|Roboto+Slab&display=swap|Arimo:400,700&display=swap');
+
+$maincolor: #FFD91E
+$secondarycolor: #232323
+$textwhite: #ffffff
+$textdark: #232323
+$fontText: 'Open Sans', sans-serif
+$fontHelvetica: 'Arimo', sans-serif
+$fontTitle: 'Montserrat', sans-serif
+$fontText1: 'Roboto Slab', serif
+=center
+    top: 50%
+    left: 20%
+    transform: translate(-50%,-50%)
+
+body
+    font-family: sans-serif
+    overflow-x: hidden
+    font-family: 'Open Sans', sans-serif
+h1
+    font-family: $fontHelvetica
+.nav-container
+    max-width: 1400px
+
+nav
+    position: fixed
+    z-index: 100
+    background-color: #ffffff00
+    height: 75px
+    width: 100vw
+    display: flex
+    transition: all 0.25s ease-in-out
+    .navInContainer
+        width: 1200px
+        display: flex
+        margin: 0 auto
+    .brandContainer
+        display: flex
+        justify-content: center
+        align-content: center
+    ul
+        display: flex
+        padding: 0
+        list-style: none
+        margin: 0 0 0 auto
+    li
+        display: flex
+        align-self: center
+        margin: 0 15px
+    .borderLink
+        border: solid 1px #74C7D1
+    .navLink
+        text-decoration: none
+        color: $textwhite
+        transition: color .15s ease-in-out
+        display: flex
+        align-self: center
+        padding: 5px 10px
+        transition: all 0.25s ease-in-out 
+        &:hover
+            color: #74C7D1
+            text-decoration: none
+            background-color: #74C7D113
+    .languageList
+        position: relative
+        display: block
+        overflow: hidden
+        top: 60px
+        left: -60px
+        transition: all .4s ease-in-out
+        opacity: 0
+        height: 0
+        a 
+            color: white
+            text-decoration: none
+            padding: 10px 5px
+            &:hover
+                color: #ffffffc4
+    .navLanguage
+        text-decoration: none
+        color: $textwhite
+        transition: color .15s ease-in-out
+        display: flex
+        align-self: center
+        padding: 5px 5px
+        transition: all 0.25s ease-in-out 
+        cursor: pointer
+        &:hover
+            background-color: #74C7D113
+
+    .brandName
+        font-size: 1.5rem
+        display: flex
+        align-self: center
+        margin: 0 0 0 25px
+        font-family: $fontHelvetica
+
+    .brandNameLogo
+        height: 40px
+        width: 40px
+        margin: 15px 0
+
+.backgroundWrapper
+    background: #2f286f
+    background: linear-gradient(135deg, #352e75 0%,#262054 100%)
+
+.aboutMe
+    height: 100vh
+    display: flex
+    img
+        height: 100%
+        width: 100%
+
+    h3
+        font-weight: 700
+        font-size: 3rem
+        color: #74C7D1
+    p
+        color: $textwhite
+
+.skills
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    justify-items: center
+    .cardContent
+        display: block
+       
+    .imgAndHeader
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 1.5rem
+        
+    .cardImg
+        height: 50px
+    .header
+        font-weight: 700
+        font-size: 3rem
+        color: #74C7D1
+        margin-bottom: 2rem
+    .card
+        padding: 15px 25px

@@ -13,6 +13,18 @@ h1 {
   max-width: 1400px;
 }
 
+.scrolling {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 5;
+  opacity: 1;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
 nav {
   position: fixed;
   z-index: 100;
@@ -124,6 +136,10 @@ nav .navLanguage {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   cursor: pointer;
+}
+
+nav .navLanguage:hover {
+  background-color: #74C7D113;
 }
 
 nav .brandName {
@@ -298,17 +314,115 @@ nav .brandNameLogo {
   padding: 200px 0;
 }
 
+.projects a {
+  color: #74C7D1;
+}
+
 .projects .projectCard {
   height: 300px;
   width: 100%;
   background-color: white;
 }
 
-.projects h3 {
+.projects .recentTitle {
   font-weight: 700;
   font-size: 3rem;
   color: #74C7D1;
   line-height: 1.5;
+}
+
+.projects .projectCard {
+  width: 100%;
+  height: 360px;
+  padding: 1.5rem;
+  background: white;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  -webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.projects .projectCard:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.projects .projectCard:hover:before {
+  opacity: 1;
+}
+
+.projects .projectCard:hover .projectInfo {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.projects .projectCard:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.projects .projectCard img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.projects .projectInfo {
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.projects .projectInfo h3 {
+  margin: 0px;
+}
+
+.projects .projectInfo p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.projects .projectInfo button {
+  padding: 0.6rem;
+  outline: none;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.projects .projectInfo button:hover {
+  background: #74C7D1;
+  color: white;
 }
 
 .contact {
