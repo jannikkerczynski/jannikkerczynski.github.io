@@ -316,6 +316,11 @@ nav .brandNameLogo {
 
 .projects a {
   color: #74C7D1;
+  text-decoration: none;
+}
+
+.projects a:hover {
+  color: #74c8d1c0;
 }
 
 .projects .projectCard {
@@ -409,7 +414,8 @@ nav .brandNameLogo {
 }
 
 .projects .projectInfo button {
-  padding: 0.6rem;
+  margin: 5px;
+  padding: 9.6px;
   outline: none;
   border: none;
   background: white;
@@ -425,8 +431,29 @@ nav .brandNameLogo {
   color: white;
 }
 
+.projects .projectInfo .moreProjects {
+  padding: 7.6px;
+  outline: none;
+  border: solid 2px white;
+  background: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.projects .projectInfo .moreProjects:hover {
+  background: #ffffff38;
+  color: white;
+}
+
 .contact {
   padding: 200px 0;
+}
+
+.contact a {
+  text-decoration: none;
 }
 
 .contact h3 {

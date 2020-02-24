@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Montserrat|Roboto+Slab&display=swap|Arimo:400,700&display=swap');
 
-$maincolor: #FFD91E
+$maincolor: #74C7D1
 $secondarycolor: #232323
 $textwhite: #ffffff
 $textdark: #232323
@@ -213,6 +213,9 @@ nav
     padding: 200px 0
     a
         color: #74C7D1
+        text-decoration: none
+        &:hover
+            color: #74c8d1c0
     .projectCard
         height: 300px
         width: 100%
@@ -271,7 +274,8 @@ nav
             font-size: 15px
             margin-top: 8px
         button
-            padding: 0.6rem
+            margin: 5px
+            padding: 9.6px
             outline: none
             border: none
             background: white
@@ -282,9 +286,23 @@ nav
             &:hover
                 background: #464646
                 color: white
+        .moreProjects
+            padding: 7.6px
+            outline: none
+            border: solid 2px white
+            background: none
+            color: white
+            font-weight: bold
+            cursor: pointer
+            transition: 0.25s ease-in-out
+            &:hover
+                background: #ffffff38
+                color: white
 
 .contact
     padding: 200px 0
+    a
+        text-decoration: none
     h3
         font-weight: 700
         font-size: 2rem

@@ -86,12 +86,51 @@ $(".navLanguage").click(function() {
   $(".languageList").css("height", "90px");
   $(".languageList").css("opacity", "1");
 });
+
 $("html").click(function(e) {
   if (!$(e.target).hasClass("navLanguage")) {
     $(".languageList").css("height", "0");
     $(".languageList").css("opacity", "0");
   }
 });
+
+$("#WD").click(function() {
+  $("#WD").addClass("focusedTopic");
+  $("#GD").removeClass("focusedTopic");
+  $(".graphicProjects").addClass("d-none");
+  $(".webDevProjects").removeClass("d-none");
+  setTimeout(() => {
+    $(".graphicProjects").css("opacity", "0");
+    $(".webDevProjects").css("opacity", "1");
+  }, 100);
+});
+
+$("#GD").click(function() {
+  $("#GD").addClass("focusedTopic");
+  $("#WD").removeClass("focusedTopic");
+  $(".webDevProjects").addClass("d-none");
+  $(".graphicProjects").removeClass("d-none");
+  setTimeout(() => {
+    $(".graphicProjects").css("opacity", "1");
+    $(".webDevProjects").css("opacity", "0");
+  }, 100);
+});
+
+const modal = document.getElementById("myModal");
+const span = document.getElementById("close");
+
+span.onclick = function() {
+  modal.style.display = "none";
+};
+
+function modalOpen(imgID, textCaption) {
+  const img = document.getElementById(imgID);
+  const modalImg = document.getElementById("img01");
+  const captionText = document.getElementById("caption");
+  modal.style.display = "block";
+  modalImg.src = img.src;
+  captionText.innerHTML = textCaption;
+}
 
 $(function() {
   scrollActions();
