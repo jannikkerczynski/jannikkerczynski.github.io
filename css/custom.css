@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Montserrat|Roboto+Slab&display=swap|Arimo:400,700&display=swap");
 body {
   font-family: sans-serif;
-  overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 h1 {
@@ -159,9 +160,156 @@ nav .brandNameLogo {
   margin: 15px 0;
 }
 
+.navMobile {
+  position: fixed;
+  z-index: 100;
+  background-color: #ffffff00;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.navMobile .navInContainer {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navMobile a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navMobile .brandContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.navMobile .brandNameLogo {
+  height: 50%;
+  width: auto;
+  margin: auto 20px;
+}
+
+.navMobile #hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.navMobile #hamburger .line1 {
+  height: 2px;
+  width: 20px;
+  background: white;
+}
+
+.navMobile #hamburger .line2 {
+  height: 2px;
+  width: 15px;
+  background: white;
+  margin: 5px 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.navMobile #hamburger .line3 {
+  height: 2px;
+  width: 20px;
+  background: white;
+}
+
+.mobileMenu {
+  width: 75vw;
+  height: 100vh;
+  position: fixed;
+  background: #1c164b;
+  z-index: 99;
+  top: 0;
+  right: -75vw;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mobileMenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: auto 0;
+  width: 100%;
+  list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.mobileMenu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 20px 0px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.mobileMenu li span {
+  padding: 0px 100px 0 100px;
+  border-top: 2px solid;
+}
+
+.mobileMenu .borderLink {
+  border: solid 1px #74C7D1;
+}
+
+.mobileMenu .navLink {
+  text-decoration: none;
+  color: #ffffff;
+  -webkit-transition: color .15s ease-in-out;
+  transition: color .15s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 5px 10px;
+}
+
 .backgroundWrapper {
   background: #2f286f;
   background: linear-gradient(135deg, #352e75 0%, #262054 100%);
+  overflow-x: hidden;
 }
 
 .opener {
@@ -194,6 +342,13 @@ nav .brandNameLogo {
   transition: all 0.2s ease-in-out;
 }
 
+@media (max-width: 599px) {
+  .opener .buttonWork {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}
+
 .opener .buttonWork:hover {
   background: #64abb3;
 }
@@ -215,6 +370,13 @@ nav .brandNameLogo {
   transition: all 0.2s ease-in-out;
 }
 
+@media (max-width: 599px) {
+  .opener .buttonAboutMe {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+}
+
 .opener .buttonAboutMe:hover {
   background: #74C7D123;
   color: #ffffff;
@@ -230,10 +392,22 @@ nav .brandNameLogo {
   font-family: "Montserrat", sans-serif;
 }
 
+@media (max-width: 599px) {
+  .opener h1 {
+    font-size: 2rem;
+  }
+}
+
 .opener p {
   font-size: 1.2rem;
   font-family: "Open Sans", sans-serif;
   color: #dbdbdb;
+}
+
+@media (max-width: 599px) {
+  .opener p {
+    font-size: 1rem;
+  }
 }
 
 .opener ul {
@@ -255,6 +429,12 @@ nav .brandNameLogo {
   display: flex;
 }
 
+@media (max-width: 599px) {
+  .introduction {
+    padding: 15px 0;
+  }
+}
+
 .introduction .customContainer {
   margin: 0 auto;
 }
@@ -265,14 +445,34 @@ nav .brandNameLogo {
   color: #74C7D1;
 }
 
+@media (max-width: 599px) {
+  .introduction h3 {
+    font-size: 2rem;
+  }
+}
+
 .introduction p {
   color: #ffffff;
 }
 
+@media (max-width: 599px) {
+  .introduction p {
+    font-size: 1rem;
+  }
+}
+
 .introduction .wordBubbleContainer {
-  position: relative;
-  height: 700px;
-  width: 700px;
+  height: 540px;
+  width: 540px;
+}
+
+@media (max-width: 599px) {
+  .introduction .wordBubbleContainer {
+    height: 335px;
+    width: 335px;
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
 }
 
 .introduction .wordBubble1 {
@@ -314,6 +514,12 @@ nav .brandNameLogo {
   padding: 200px 0;
 }
 
+@media (max-width: 599px) {
+  .projects {
+    padding: 15px 0;
+  }
+}
+
 .projects a {
   color: #74C7D1;
   text-decoration: none;
@@ -334,6 +540,12 @@ nav .brandNameLogo {
   font-size: 3rem;
   color: #74C7D1;
   line-height: 1.5;
+}
+
+@media (max-width: 599px) {
+  .projects .recentTitle {
+    font-size: 2rem;
+  }
 }
 
 .projects .projectCard {
@@ -450,6 +662,12 @@ nav .brandNameLogo {
 
 .contact {
   padding: 200px 0;
+}
+
+@media (max-width: 599px) {
+  .contact {
+    padding: 50px 0;
+  }
 }
 
 .contact a {
@@ -580,6 +798,19 @@ nav .brandNameLogo {
   transition: all 0.25s ease-in-out;
 }
 
+@media (max-width: 599px) {
+  .contact .socialButton {
+    padding: 0;
+    margin-left: 20px;
+    font-size: 2rem;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
 .contact .socialButton:hover {
   color: #74C7D1;
 }
@@ -588,16 +819,40 @@ nav .brandNameLogo {
   outline: none;
 }
 
+.contact .buttonsSocialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .contact #linkedIn {
   opacity: 0;
+}
+
+@media (max-width: 599px) {
+  .contact #linkedIn {
+    opacity: 1;
+  }
 }
 
 .contact #instagram {
   opacity: 0;
 }
 
+@media (max-width: 599px) {
+  .contact #instagram {
+    opacity: 1;
+  }
+}
+
 .contact #facebook {
   opacity: 0;
+}
+
+@media (max-width: 599px) {
+  .contact #facebook {
+    opacity: 1;
+  }
 }
 
 footer {

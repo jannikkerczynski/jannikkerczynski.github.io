@@ -7,7 +7,8 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="description" content="" />
-    <meta name="author" content="Jannik" />
+    <meta name="author" content="Jannik Kerczynski" />
+    <link rel="icon" type="image/png" href="/img/thumbnailv2.png" />
     <title>Jannik Kerczynski</title>
 
     <!-- Bootstrap core CSS -->
@@ -27,7 +28,7 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="d-none d-md-flex">
       <div class="navInContainer">
         <div class="brandContainer">
           <a href="#"
@@ -60,11 +61,68 @@
         </ul>
       </div>
     </nav>
+    <nav class="navMobile d-flex d-sm-none">
+      <div class="navInContainer">
+        <div class="brandContainer">
+          <a href="/index.html"
+            ><img class="brandNameLogo" src="/img/logov2.png" alt="" />
+          </a>
+        </div>
+        <div id="hamburger">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </div>
+      </div>
+    </nav>
+    <div class="mobileMenu">
+      <ul>
+        <li>
+          <a class="navLink borderLink" href="#">Home</a>
+        </li>
+        <li>
+          <a class="navLink" href="/aboutMe.html">Über mich</a>
+        </li>
+        <li>
+          <a class="navLink" href="/myWork.html">Meine Projekte</a>
+        </li>
+        <li>
+          <a class="navLink" href="/contact.html">Kontakt</a>
+        </li>
+        <li>
+          <span>
+          </span>
+        </li>
+        <li>
+          <a class="navLink" href="/index.html">EN</a>
+        </li>
+        <li>
+          <a class="navLink" href="/pt/index.html">PT</a>
+        </li>
+      </ul>
+    </div>
     <div class="backgroundWrapper">
+      <img
+      class="scrolling d-none d-sm-block"
+      src="/img/scroll.gif"
+      alt="scrolling"
+    />
       <div class="opener">
         <div class="container">
-          <div class="row">
-            <div class="col-5 justify-self-center align-self-center">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-7 col-10">
+              <img
+                src="/img/laptop_phone.png"
+                alt="laptop phone"
+                width="100%"
+                height="100%"
+                data-aos="fade-left"
+                data-aos-easing="ease-in-out"
+                data-aos-duration="500"
+                data-aos-delay="0"
+              />
+            </div>
+            <div class="col-lg-5 col-10">
               <h1
                 class="mb-2"
                 data-aos="fade-in"
@@ -107,26 +165,15 @@
                 </button>
               </a>
             </div>
-            <div class="col-7">
-              <img
-                src="/img/laptop_phone.png"
-                alt="laptop phone"
-                width="100%"
-                height="100%"
-                data-aos="fade-left"
-                data-aos-easing="ease-in-out"
-                data-aos-duration="500"
-                data-aos-delay="0"
-              />
-            </div>
+           
           </div>
         </div>
       </div>
 
       <div class="introduction">
         <div class="container">
-          <div class="row">
-            <div class="col-6 justify-self-center align-self-center">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6 col-10">
               <h3
                 class="mb-5"
                 data-aos="fade-in"
@@ -161,7 +208,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-12">
               <div class="wordBubbleContainer">
                 <div
                   class="wordBubble1"
@@ -191,11 +238,11 @@
 
       <div class="projects">
         <div class="container">
-          <div class="row">
-            <div class="col-9">
+          <div class="row  justify-content-center align-items-center">
+            <div class="col-lg-9 col-12">
               <div class="row">
                 <div
-                  class="col-6 mb-4"
+                  class="col-12 col-md-6 mb-4"
                   data-aos="fade-up"
                   data-aos-easing="ease-in-out"
                   data-aos-duration="500"
@@ -229,7 +276,7 @@
                   </div>
                 </div>
                 <div
-                  class="col-6 mb-4"
+                  class="col-12 col-md-6 mb-4"
                   data-aos="fade-up"
                   data-aos-easing="ease-in-out"
                   data-aos-duration="500"
@@ -266,7 +313,7 @@
                   </div>
                 </div>
                 <div
-                  class="col-6 mb-4"
+                  class="col-12 col-md-6 mb-4"
                   data-aos="fade-up"
                   data-aos-easing="ease-in-out"
                   data-aos-duration="500"
@@ -291,7 +338,7 @@
                   </div>
                 </div>
                 <div
-                  class="col-6 mb-4"
+                  class="col-12 col-md-6 mb-4"
                   data-aos="fade-up"
                   data-aos-easing="ease-in-out"
                   data-aos-duration="500"
@@ -322,7 +369,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3 justify-self-center align-self-center">
+            <div class="col-12 col-md-3 order-first order-lg-0  justify-self-center align-self-center">
               <h3
                 class="recentTitle"
                 data-aos="fade-left"
@@ -339,8 +386,8 @@
 
       <div class="contact">
         <div class="container">
-          <div class="row">
-            <div class="col-6 justify-self-center align-self-center">
+          <div class="row justify-content-center align-items-cente">
+            <div class="col-lg-6 col-11 justify-self-center align-self-center">
               <h3>Sind Sie daran interessiert, mit mir zu arbeiten?</h3>
               <p>
                 Dann nehmen Sie mit mir Kontakt auf oder knüfpen sie Kontakt zu
@@ -351,7 +398,7 @@
                 <a href="/de/contact.html">
                   <button class="buttonContact">Kontakt</button>
                 </a>
-                <div class="buttonSocialMediaDE">
+                <div class="buttonSocialMediaDE d-none d-sm-block">
                   <div style="margin-bottom: 50px; display: inline-block;">
                     Soziale Medien
                   </div>
@@ -373,9 +420,28 @@
                     </button>
                   </a>
                 </div>
+                <div class="buttonsSocialMedia d-flex d-sm-none">
+                  <a
+                    href="https://www.linkedin.com/in/jannik-kerczynski-25b48716a/" class="d-flex"
+                  >
+                    <button id="linkedIn" class=" socialButton">
+                      <i class="fab fa-linkedin"></i>
+                    </button>
+                  </a>
+                  <a href="https://www.instagram.com/jannikerczynski/?hl=de" class="d-flex">
+                    <button id="instagram" class=" socialButton">
+                      <i class="fab fa-instagram"></i>
+                    </button>
+                  </a>
+                  <a href="https://www.facebook.com/jannik.kerczynski" class="d-flex">
+                    <button id="facebook" class=" socialButton">
+                      <i class="fab fa-facebook-square"></i>
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-10 order-first order-lg-0">
               <img
                 src="/img/letter.png"
                 alt="letter"
