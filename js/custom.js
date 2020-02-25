@@ -19,10 +19,12 @@ let menuOpen = false;
 $("#hamburger").click(function(){
   if(!menuOpen){
     $(".mobileMenu").css("right", "0px");
+    $(".navMobile").css("background", "#ffffff00");
     $(".line2").css("width", "20px");
     menuOpen = true;
   } else {
     $(".mobileMenu").css("right", "-75vw");
+    $(".navMobile").css("background", "#ffffff00");
     $(".line2").css("width", "15px");
     menuOpen = false;
   }
