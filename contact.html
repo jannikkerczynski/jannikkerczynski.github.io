@@ -28,7 +28,7 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="d-none d-md-flex">
       <div class="navInContainer">
         <div class="brandContainer">
           <a href="#"
@@ -61,13 +61,53 @@
         </ul>
       </div>
     </nav>
+    <nav class="navMobile d-flex d-sm-none">
+      <div class="navInContainer">
+        <div class="brandContainer">
+          <a href="/index.html"
+            ><img class="brandNameLogo" src="/img/logov2.png" alt="" />
+          </a>
+        </div>
+        <div id="hamburger">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </div>
+      </div>
+    </nav>
+    <div class="mobileMenu">
+      <ul>
+        <li>
+          <a class="navLink " href="/index.html">Home</a>
+        </li>
+        <li>
+          <a class="navLink" href="/aboutMe.html">About me</a>
+        </li>
+        <li>
+          <a class="navLink" href="/myWork.html">My work</a>
+        </li>
+        <li>
+          <a class="navLink borderLink" href="#">Contact</a>
+        </li>
+        <li>
+          <span>
+          </span>
+        </li>
+        <li>
+          <a class="navLink" href="/de/contact.html">DE</a>
+        </li>
+        <li>
+          <a class="navLink" href="/pt/contact.html">PT</a>
+        </li>
+      </ul>
+    </div>
     <div class="backgroundWrapper">
       <div class="container contact">
         <div class="row">
-          <div class="col-6 align-self-center ">
+          <div class="col-12 col-lg-6 align-self-center">
             <img src="/img/mail.png" alt="mail" />
           </div>
-          <div class="col-6 align-self-center ">
+          <div class="col-12 col-lg-6 align-self-center ">
             <form action="https://formspree.io/xvorzqrk" method="POST">
               <h3>Contact me</h3>
               <label>

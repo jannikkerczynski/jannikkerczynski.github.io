@@ -24,7 +24,7 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="d-none d-md-flex">
       <div class="navInContainer">
         <div class="brandContainer">
           <a href="#"
@@ -58,6 +58,46 @@
       </div>
     </nav>
 
+    <nav class="navMobile d-flex d-sm-none">
+      <div class="navInContainer">
+        <div class="brandContainer">
+          <a href="/index.html"
+            ><img class="brandNameLogo" src="/img/logov2.png" alt="" />
+          </a>
+        </div>
+        <div id="hamburger">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </div>
+      </div>
+    </nav>
+    <div class="mobileMenu">
+      <ul>
+        <li>
+          <a class="navLink " href="/index.html">Home</a>
+        </li>
+        <li>
+          <a class="navLink" href="/aboutMe.html">About me</a>
+        </li>
+        <li>
+          <a class="navLink borderLink" href="#">My work</a>
+        </li>
+        <li>
+          <a class="navLink" href="/contact.html">Contact</a>
+        </li>
+        <li>
+          <span>
+          </span>
+        </li>
+        <li>
+          <a class="navLink" href="/de/myWork.html">DE</a>
+        </li>
+        <li>
+          <a class="navLink" href="/pt/myWork.html">PT</a>
+        </li>
+      </ul>
+    </div>
     <div id="myModal" class="modal">
       <!-- The Close Button -->
       <span id="close">&times;</span>

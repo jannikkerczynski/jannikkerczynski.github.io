@@ -8,10 +8,28 @@ $fontText: 'Open Sans', sans-serif
 $fontHelvetica: 'Arimo', sans-serif
 $fontTitle: 'Montserrat', sans-serif
 $fontText1: 'Roboto Slab', serif
-=center
-    top: 50%
-    left: 20%
-    transform: translate(-50%,-50%)
+
+
+
+=xs 
+    @media (max-width: 599px) 
+        @content
+
+=sm 
+    @media (min-width: 600px) 
+        @content
+
+=md
+    @media (min-width: 900px) 
+        @content
+
+=lg
+    @media (min-width: 1200px) 
+        @content
+
+=xl
+    @media (min-width: 1800px) 
+        @content
 
 body
     font-family: sans-serif
@@ -109,6 +127,88 @@ nav
         width: 40px
         margin: 15px 0
 
+.navMobile
+    position: fixed
+    z-index: 100
+    background-color: #ffffff00
+    width: 100vw
+    display: flex
+    transition: all 0.25s ease-in-out
+    .navInContainer
+        width: 100vw
+        display: flex
+    a
+        display: flex
+    .brandContainer
+        display: flex
+        justify-content: center
+        align-content: center
+    .brandNameLogo
+        height: 50%
+        width: auto
+        margin: auto 20px
+    #hamburger
+        display: flex
+        flex-direction: column
+        justify-self: center
+        align-self: center
+        margin-left: auto
+        margin-right: 25px
+        .line1
+            height: 2px
+            width: 20px
+            background: white
+        .line2
+            height: 2px
+            width: 15px
+            background: white
+            margin: 5px 0
+            transition: all 0.4s ease-in-out
+        .line3
+            height: 2px
+            width: 20px
+            background: white
+    
+.mobileMenu
+    width: 75vw
+    height: 100vh
+    position: fixed
+    background: #1c164b
+    z-index: 99
+    top: 0
+    right: -75vw
+    transition: all 0.4s ease-in-out
+    display: flex
+    
+    ul
+        display: flex
+        padding: 0
+        margin: auto 0
+        width: 100%
+        list-style: none
+        flex-direction: column
+        justify-content: start
+        align-items: start
+    li
+        display: flex
+        align-self: center
+        margin: 20px 0px
+        font-size: 1.5rem
+        color: white
+        span 
+            padding: 0px 100px 0 100px
+            border-top: 2px solid
+        
+    .borderLink
+        border: solid 1px #74C7D1
+    .navLink
+        text-decoration: none
+        color: $textwhite
+        transition: color .15s ease-in-out
+        display: flex
+        align-self: center
+        padding: 5px 10px
+
 .backgroundWrapper
     background: #2f286f
     background: linear-gradient(135deg, #352e75 0%,#262054 100%)
@@ -117,16 +217,28 @@ nav
     
     height: 100vh
     display: flex
+    +xs
+        height: 100%
     .row
         background: white
         margin: auto
+        +xs
+        height: 100%
+        margin: 100px 0
         img
             padding: 100px
+            +xs
+                padding: 20px 0px
+                margin: auto 0px
+                height: 100%
+                width: auto
     form
         padding: 25px
         display: flex
         flex-direction: column
         width: 400px
+        +xs
+            width: 100%
         input
             background: #e7e7e7
             color: #6b6b6b

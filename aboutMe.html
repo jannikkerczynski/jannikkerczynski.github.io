@@ -28,7 +28,7 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="d-none d-md-flex">
       <div class="navInContainer">
         <div class="brandContainer">
           <a href="#"
@@ -61,11 +61,52 @@
         </ul>
       </div>
     </nav>
+
+    <nav class="navMobile d-flex d-sm-none">
+      <div class="navInContainer">
+        <div class="brandContainer">
+          <a href="/index.html"
+            ><img class="brandNameLogo" src="/img/logov2.png" alt="" />
+          </a>
+        </div>
+        <div id="hamburger">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </div>
+      </div>
+    </nav>
+    <div class="mobileMenu">
+      <ul>
+        <li>
+          <a class="navLink" href="/index.html">Home</a>
+        </li>
+        <li>
+          <a class="navLink borderLink" href="#">About me</a>
+        </li>
+        <li>
+          <a class="navLink" href="/myWork.html">My work</a>
+        </li>
+        <li>
+          <a class="navLink" href="/contact.html">Contact</a>
+        </li>
+        <li>
+          <span>
+          </span>
+        </li>
+        <li>
+          <a class="navLink" href="/de/aboutMe.html">DE</a>
+        </li>
+        <li>
+          <a class="navLink" href="/pt/aboutMe.html">PT</a>
+        </li>
+      </ul>
+    </div>
     <div class="backgroundWrapper">
       <div class="container aboutMe">
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center align-items-center py-5 py-lg-0">
           <div
-            class="col-6"
+            class="col-12 col-lg-6"
             data-aos="fade.in"
             data-aos-easing="ease-in-out"
             data-aos-duration="750"
@@ -74,7 +115,7 @@
             <img src="/img/janker.png" alt="janker" />
           </div>
           <div
-            class="col-6"
+            class="col-12 col-lg-6"
             data-aos="fade-left"
             data-aos-easing="ease-in-out"
             data-aos-duration="750"
@@ -109,7 +150,7 @@
         </h3>
         <div class="row justify-content-center align-items-center">
           <div
-            class="col-4 cardContainer"
+            class="col-12 col-lg-4 my-2 my-lg-0cardContainer"
             data-aos="fade-up"
             data-aos-easing="ease-in-out"
             data-aos-duration="500"
@@ -145,7 +186,7 @@
             </div>
           </div>
           <div
-            class="col-4 cardContainer"
+            class="col-12 col-lg-4 my-2 my-lg-0cardContainer"
             data-aos="fade-up"
             data-aos-easing="ease-in-out"
             data-aos-duration="500"
@@ -181,7 +222,7 @@
             </div>
           </div>
           <div
-            class="col-4 cardContainer"
+            class="col-12 col-lg-4 my-2 my-lg-0cardContainer"
             data-aos="fade-up"
             data-aos-easing="ease-in-out"
             data-aos-duration="750"
@@ -224,7 +265,7 @@
           </div>
         </div>
       </div>
-      <div class="container curriculumVitae">
+      <div class="container curriculumVitae d-none d-lg-block">
         <h3
           data-aos="fade-right"
           data-aos-easing="ease-in-out"
@@ -268,6 +309,83 @@
           </div>
           <div
             class="containerTL left"
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="500"
+            data-aos-delay=""
+          >
+            <div class="content">
+              <h2>April 2019</h2>
+              <img src="/img/log.png" alt="logo hshl" height="50px" />
+              <p>
+                <b>Employment at logarithmo</b> <br />
+                as Frontend Developer and Designer
+              </p>
+            </div>
+          </div>
+          <div
+            class="containerTL right"
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="500"
+            data-aos-delay="0"
+          >
+            <div class="content">
+              <h2>Februar 2020</h2>
+              <img src="/img/hshl.jpg" alt="logo hshl" height="50px" />
+              <p>
+                <b>Bachelor of Science</b> <br />
+                in computational visualistics and design
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container curriculumVitaeMobile  d-lg-none">
+        <h3
+          data-aos="fade-right"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="500"
+          data-aos-delay="0"
+        >
+          Curriculum Vitae
+        </h3>
+        <div class="timeline">
+          <div
+            class="containerTL right"
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="500"
+            data-aos-delay="0"
+          >
+            <div class="content">
+              <h2>August 2014</h2>
+              <img src="/img/sgb.png" alt="logo sgb" height="50px" />
+              <p>
+                <b>High School Graduation</b> <br />
+                From Städtisches Gymnasium Bergkamen
+              </p>
+            </div>
+          </div>
+          <div
+            class="containerTL right"
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="500"
+            data-aos-delay="0"
+          >
+            <div class="content">
+              <h2>September 2014</h2>
+              <img src="/img/hshl.jpg" alt="logo hshl" height="50px" />
+              <p>
+                <b>Study computational visualistics and design</b><br />
+                at Hochschule Hamm-Lippstadt
+              </p>
+            </div>
+          </div>
+          <div
+            class="containerTL right"
             data-aos="fade-up"
             data-aos-easing="ease-in-out"
             data-aos-duration="500"

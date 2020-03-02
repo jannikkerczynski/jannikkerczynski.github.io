@@ -8,10 +8,27 @@ $fontText: 'Open Sans', sans-serif
 $fontHelvetica: 'Arimo', sans-serif
 $fontTitle: 'Montserrat', sans-serif
 $fontText1: 'Roboto Slab', serif
-=center
-    top: 50%
-    left: 20%
-    transform: translate(-50%,-50%)
+
+    
+=xs 
+    @media (max-width: 599px) 
+        @content
+
+=sm 
+    @media (min-width: 600px) 
+        @content
+
+=md
+    @media (min-width: 900px) 
+        @content
+
+=lg
+    @media (min-width: 1200px) 
+        @content
+
+=xl
+    @media (min-width: 1800px) 
+        @content
 
 body
     font-family: sans-serif
@@ -100,12 +117,95 @@ nav
         width: 40px
         margin: 15px 0
 
+
+.navMobile
+    position: fixed
+    z-index: 100
+    background-color: #ffffff00
+    width: 100vw
+    display: flex
+    transition: all 0.25s ease-in-out
+    .navInContainer
+        width: 100vw
+        display: flex
+    a
+        display: flex
+    .brandContainer
+        display: flex
+        justify-content: center
+        align-content: center
+    .brandNameLogo
+        height: 50%
+        width: auto
+        margin: auto 20px
+    #hamburger
+        display: flex
+        flex-direction: column
+        justify-self: center
+        align-self: center
+        margin-left: auto
+        margin-right: 25px
+        .line1
+            height: 2px
+            width: 20px
+            background: white
+        .line2
+            height: 2px
+            width: 15px
+            background: white
+            margin: 5px 0
+            transition: all 0.4s ease-in-out
+        .line3
+            height: 2px
+            width: 20px
+            background: white
+    
+.mobileMenu
+    width: 75vw
+    height: 100vh
+    position: fixed
+    background: #1c164b
+    z-index: 99
+    top: 0
+    right: -75vw
+    transition: all 0.4s ease-in-out
+    display: flex
+    
+    ul
+        display: flex
+        padding: 0
+        margin: auto 0
+        width: 100%
+        list-style: none
+        flex-direction: column
+        justify-content: start
+        align-items: start
+    li
+        display: flex
+        align-self: center
+        margin: 20px 0px
+        font-size: 1.5rem
+        color: white
+        span 
+            padding: 0px 100px 0 100px
+            border-top: 2px solid
+        
+    .borderLink
+        border: solid 1px #74C7D1
+    .navLink
+        text-decoration: none
+        color: $textwhite
+        transition: color .15s ease-in-out
+        display: flex
+        align-self: center
+        padding: 5px 10px
+
 .backgroundWrapper
     background: #2f286f
     background: linear-gradient(135deg, #352e75 0%,#262054 100%)
 
 .aboutMe
-    height: 100vh
+    height: 100%
     display: flex
     img
         height: 100%
@@ -116,11 +216,13 @@ nav
         font-family: $fontTitle
         font-size: 3rem
         color: #74C7D1
+        +xs
+            font-size: 2rem
     p
         color: $textwhite
 
 .skills
-    height: 100vh
+    height: 100%
     display: flex
     flex-direction: column
     justify-content: center
@@ -141,6 +243,8 @@ nav
         font-size: 3rem
         color: #74C7D1
         margin-bottom: 2rem
+        +xs
+            font-size: 2rem
     .cardContainer
         height: 350px
         display: flex
@@ -154,6 +258,9 @@ nav
         padding: 25px 
         border-radius: 0
         height: 350px
+        +xs
+            width: 100%
+            height: 100%
     h3
         color: white
     ul
@@ -239,6 +346,81 @@ nav
             border-color: transparent white transparent transparent
         &::after
             left: -16px
+
+    .content
+        padding: 20px 30px
+        background-color: white
+        position: relative
+        border-radius: 6px
+        display: flex
+        flex-wrap: wrap
+
+
+.curriculumVitaeMobile
+    padding: 100px 0
+    h3
+        font-weight: 500
+        font-family: $fontTitle
+        font-size: 2rem
+        padding-left: 15px
+        color: #74C7D1
+        margin-bottom: 3rem
+    h2
+        font-size: 1.5rem
+        margin-right: 15px
+        flex: 0 0 100%
+    img
+        height: 50px
+        margin-right: 15px
+    .timeline
+        position: relative
+        max-width: 400px
+        margin: 0 0
+        
+        &::after
+            content: ''
+            position: absolute
+            width: 6px
+            background-color: white
+            top: 0
+            bottom: 0
+            left: 7.5%
+            margin-left: -3px
+
+    .containerTL
+        padding: 10px 40px
+        position: relative
+        background-color: inherit
+        width: 100%
+        &::after
+            content: ''
+            position: absolute
+            width: 25px
+            height: 25px
+            right: -17px
+            background-color: white
+            border: 4px solid #74C7D1
+            top: 15px
+            border-radius: 50%
+            z-index: 1
+
+    .right
+        left: 7.5%
+
+    .right
+        &::before
+            content: " "
+            height: 0
+            position: absolute
+            top: 22px
+            width: 0
+            z-index: 1
+            left: 30px
+            border: medium solid white
+            border-width: 10px 10px 10px 0
+            border-color: transparent white transparent transparent
+        &::after
+            left: -13px
 
     .content
         padding: 20px 30px

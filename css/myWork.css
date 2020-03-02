@@ -147,6 +147,152 @@ nav .brandNameLogo {
   margin: 15px 0;
 }
 
+.navMobile {
+  position: fixed;
+  z-index: 100;
+  background-color: #ffffff00;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.navMobile .navInContainer {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navMobile a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navMobile .brandContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.navMobile .brandNameLogo {
+  height: 50%;
+  width: auto;
+  margin: auto 20px;
+}
+
+.navMobile #hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.navMobile #hamburger .line1 {
+  height: 2px;
+  width: 20px;
+  background: white;
+}
+
+.navMobile #hamburger .line2 {
+  height: 2px;
+  width: 15px;
+  background: white;
+  margin: 5px 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.navMobile #hamburger .line3 {
+  height: 2px;
+  width: 20px;
+  background: white;
+}
+
+.mobileMenu {
+  width: 75vw;
+  height: 100vh;
+  position: fixed;
+  background: #1c164b;
+  z-index: 99;
+  top: 0;
+  right: -75vw;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mobileMenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: auto 0;
+  width: 100%;
+  list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.mobileMenu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 20px 0px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.mobileMenu li span {
+  padding: 0px 100px 0 100px;
+  border-top: 2px solid;
+}
+
+.mobileMenu .borderLink {
+  border: solid 1px #74C7D1;
+}
+
+.mobileMenu .navLink {
+  text-decoration: none;
+  color: #ffffff;
+  -webkit-transition: color .15s ease-in-out;
+  transition: color .15s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 5px 10px;
+}
+
 .backgroundWrapper {
   background: #2f286f;
   background: linear-gradient(135deg, #352e75 0%, #262054 100%);
@@ -187,12 +333,25 @@ nav .brandNameLogo {
   padding: 200px 0;
 }
 
+@media (max-width: 599px) {
+  .projects {
+    padding: 100px 0;
+  }
+}
+
 .projects h4 {
   color: #74c8d17e;
   margin: 0 25px 25px 0;
   cursor: pointer;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+}
+
+@media (max-width: 599px) {
+  .projects h4 {
+    margin-left: 15px;
+    font-size: 1.2rem;
+  }
 }
 
 .projects h4:hover {
@@ -237,6 +396,12 @@ nav .brandNameLogo {
   transition: 0.4s ease-out;
   -webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 599px) {
+  .projects .projectCard {
+    height: 100%;
+  }
 }
 
 .projects .projectCard:hover {
@@ -326,12 +491,31 @@ nav .brandNameLogo {
   transition: all 0.5s ease-in-out;
 }
 
+@media (max-width: 599px) {
+  .projects .webDevProjects {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: none;
+        flex-wrap: none;
+  }
+}
+
 .projects .webDevProjects .column {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 1;
           flex: 1 1 1;
   width: 48%;
   margin: 0 1% 0 1%;
+}
+
+@media (max-width: 599px) {
+  .projects .webDevProjects .column {
+    width: 96%;
+    margin: 0 2% 0 2%;
+    height: 250px;
+  }
 }
 
 .projects .graphicProjects {
@@ -343,6 +527,17 @@ nav .brandNameLogo {
   opacity: 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 599px) {
+  .projects .graphicProjects {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: none;
+        flex-wrap: none;
+  }
 }
 
 .projects .graphicProjects img {
@@ -359,6 +554,14 @@ nav .brandNameLogo {
           flex: 1 1 1;
   width: 31%;
   margin: 0 1% 0 1%;
+}
+
+@media (max-width: 599px) {
+  .projects .graphicProjects .column {
+    width: 96%;
+    margin: 0 2% 0 2%;
+    height: 400px;
+  }
 }
 
 .projects .graphicProjects .column-2 {

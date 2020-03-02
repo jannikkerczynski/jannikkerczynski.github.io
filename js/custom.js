@@ -33,9 +33,9 @@ $("#hamburger").click(function(){
 
 $(".backgroundWrapper").click(function(){
   if(!menuOpen){
-    $(".mobileMenu").css("right", "0px");
-    $(".line2").css("width", "20px");
-    menuOpen = true;
+    // $(".mobileMenu").css("right", "0px");
+    // $(".line2").css("width", "20px");
+    // menuOpen = true;
   } else {
     $(".mobileMenu").css("right", "-75vw");
     $(".line2").css("width", "15px");
