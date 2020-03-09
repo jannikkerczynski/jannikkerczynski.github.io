@@ -20,7 +20,7 @@ $fontText1: 'Roboto Slab', serif
         @content
 
 =md
-    @media (min-width: 900px) 
+    @media (max-width: 1000px) 
         @content
 
 =lg
@@ -217,17 +217,18 @@ nav
     
     height: 100vh
     display: flex
-    +xs
+    +md
         height: 100%
     .row
+        height: 75%
         background: white
         margin: auto
-        +xs
-        height: 100%
-        margin: 100px 0
+        +md
+            height: 100%
+            margin: 100px 0
         img
             padding: 100px
-            +xs
+            +md
                 padding: 20px 0px
                 margin: auto 0px
                 height: 100%
@@ -237,7 +238,7 @@ nav
         display: flex
         flex-direction: column
         width: 400px
-        +xs
+        +md
             width: 100%
         input
             background: #e7e7e7

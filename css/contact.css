@@ -317,24 +317,30 @@ nav .brandNameLogo {
   display: flex;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 1000px) {
   .contact {
     height: 100%;
   }
 }
 
 .contact .row {
+  height: 75%;
   background: white;
   margin: auto;
-  height: 100%;
-  margin: 100px 0;
+}
+
+@media (max-width: 1000px) {
+  .contact .row {
+    height: 100%;
+    margin: 100px 0;
+  }
 }
 
 .contact .row img {
   padding: 100px;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 1000px) {
   .contact .row img {
     padding: 20px 0px;
     margin: auto 0px;
@@ -355,7 +361,7 @@ nav .brandNameLogo {
   width: 400px;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 1000px) {
   .contact form {
     width: 100%;
   }
